@@ -9,7 +9,7 @@ conf = {
 
 consumer = Consumer(conf)
 
-topic = 'Icehockey'
+topic = 'Event'
 consumer.subscribe([topic])
 
 def consume_Message(consumer):

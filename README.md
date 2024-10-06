@@ -80,3 +80,23 @@ The file: **Producer.py** is simulating the data stream which you can start with
 ```bash
 python Producer.py
 ```
+
+Open your Browser and type: <code> localhost:8080</code>. The Kafka UI should open where you can see the Brokers, Topics with the messages and the Consumer.
+
+
+### 5. Write your first worker
+
+A worker is a little agent which is reading the data stream, doing some calculations and writing the results into a different topic.
+
+For example every time you have a ShotEvent you want to calculate the average distance of the defenders to the player who shot the puck. 
+The result you want to write into a new topic with the name: **ShotPressure** with the data:
+
+- Timestamp
+- PlayerID who shot
+- Average distance of the defenders to the player.
+- Position of the player who shot.
+- Goal or No Goal.
+
+In your next worker you can just consume the messages of this topic and make further calculations.
+
+<code>Consumer.py</code> gives you an example how to consume the messages from a specific topic.
