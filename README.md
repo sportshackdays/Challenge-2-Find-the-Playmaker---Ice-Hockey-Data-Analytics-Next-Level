@@ -1,12 +1,10 @@
-# Welcome to Challenge 2: Let's find the playmaker! 
-
+# Welcome to Challenge 2: Let's find the playmaker!
 
 ![Hockey Rink](./hockey.png)
 
 ## Getting started
 
 Explore the dataset with the notebook: **explore_the_data.ipynb**
-
 
 ## Apache Kafka setup
 
@@ -61,11 +59,9 @@ docker ps
 
 To access the Kafka UI you can type in your browser: **localhost:8080**
 
-
 ### 2. Create virtual environment
 
 Create a new virtual environment, activate it and install confluent-kafka
-
 
 ```bash
 python3 -m venv venv
@@ -81,14 +77,13 @@ The file: **Producer.py** is simulating the data stream which you can start with
 python Producer.py
 ```
 
-Open your Browser and type: <code> localhost:8080</code>. The Kafka UI should open where you can see the Brokers, Topics with the messages and the Consumer.
-
+Open your Browser and type: `<code>` localhost:8080`</code>`. The Kafka UI should open where you can see the Brokers, Topics with the messages and the Consumer.
 
 ### 5. Write your first worker
 
 A worker is a little agent which is reading the data stream, doing some calculations and writing the results into a different topic.
 
-For example every time you have a ShotEvent you want to calculate the average distance of the defenders to the player who shot the puck. 
+For example every time you have a ShotEvent you want to calculate the average distance of the defenders to the player who shot the puck.
 The result you want to write into a new topic with the name: **ShotPressure** with the data:
 
 - Timestamp
@@ -99,4 +94,4 @@ The result you want to write into a new topic with the name: **ShotPressure** wi
 
 In your next worker you can just consume the messages of this topic and make further calculations.
 
-<code>Consumer.py</code> gives you an example how to consume the messages from a specific topic.
+`<code>`worker.py `</code>` gives you an example how to consume the messages from a specific topic.
