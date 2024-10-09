@@ -162,4 +162,4 @@ cython_debug/
 #.idea/
 
 # data files
-data/*
+#data/*
